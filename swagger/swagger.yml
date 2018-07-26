@@ -1,0 +1,284 @@
+swagger: "2.0"
+info:
+  title: beego Test API
+  description: beego has a very cool tools to autogenerate documents for your API
+  version: 1.0.0
+  termsOfService: http://beego.me/
+  contact:
+    email: astaxie@gmail.com
+  license:
+    name: Apache 2.0
+    url: http://www.apache.org/licenses/LICENSE-2.0.html
+basePath: /v1
+paths:
+  /jugador/:
+    get:
+      tags:
+      - jugador
+      description: get Jugador
+      operationId: JugadorController.Get All
+      parameters:
+      - in: query
+        name: query
+        description: Filter. e.g. col1:v1,col2:v2 ...
+        type: string
+      - in: query
+        name: fields
+        description: Fields returned. e.g. col1,col2 ...
+        type: string
+      - in: query
+        name: sortby
+        description: Sorted-by fields. e.g. col1,col2 ...
+        type: string
+      - in: query
+        name: order
+        description: Order corresponding to each sortby field, if single value, apply
+          to all sortby fields. e.g. desc,asc ...
+        type: string
+      - in: query
+        name: limit
+        description: Limit the size of result set. Must be an integer
+        type: string
+      - in: query
+        name: offset
+        description: Start position of result set. Must be an integer
+        type: string
+      responses:
+        "200":
+          description: ""
+          schema:
+            $ref: '#/definitions/models.Jugador'
+        "403":
+          description: ""
+    post:
+      tags:
+      - jugador
+      description: create Jugador
+      operationId: JugadorController.Post
+      parameters:
+      - in: body
+        name: body
+        description: body for Jugador content
+        required: true
+        schema:
+          $ref: '#/definitions/models.Jugador'
+      responses:
+        "201":
+          description: '{int} models.Jugador'
+        "403":
+          description: body is empty
+  /jugador/{id}:
+    get:
+      tags:
+      - jugador
+      description: get Jugador by id
+      operationId: JugadorController.Get One
+      parameters:
+      - in: path
+        name: id
+        description: The key for staticblock
+        required: true
+        type: string
+      responses:
+        "200":
+          description: ""
+          schema:
+            $ref: '#/definitions/models.Jugador'
+        "403":
+          description: :id is empty
+    put:
+      tags:
+      - jugador
+      description: update the Jugador
+      operationId: JugadorController.Put
+      parameters:
+      - in: path
+        name: id
+        description: The id you want to update
+        required: true
+        type: string
+      - in: body
+        name: body
+        description: body for Jugador content
+        required: true
+        schema:
+          $ref: '#/definitions/models.Jugador'
+      responses:
+        "200":
+          description: ""
+          schema:
+            $ref: '#/definitions/models.Jugador'
+        "403":
+          description: :id is not int
+    delete:
+      tags:
+      - jugador
+      description: delete the Jugador
+      operationId: JugadorController.Delete
+      parameters:
+      - in: path
+        name: id
+        description: The id you want to delete
+        required: true
+        type: string
+      responses:
+        "200":
+          description: '{string} delete success!'
+        "403":
+          description: id is empty
+  /seleccion/:
+    get:
+      tags:
+      - seleccion
+      description: get Seleccion
+      operationId: SeleccionController.Get All
+      parameters:
+      - in: query
+        name: query
+        description: Filter. e.g. col1:v1,col2:v2 ...
+        type: string
+      - in: query
+        name: fields
+        description: Fields returned. e.g. col1,col2 ...
+        type: string
+      - in: query
+        name: sortby
+        description: Sorted-by fields. e.g. col1,col2 ...
+        type: string
+      - in: query
+        name: order
+        description: Order corresponding to each sortby field, if single value, apply
+          to all sortby fields. e.g. desc,asc ...
+        type: string
+      - in: query
+        name: limit
+        description: Limit the size of result set. Must be an integer
+        type: string
+      - in: query
+        name: offset
+        description: Start position of result set. Must be an integer
+        type: string
+      responses:
+        "200":
+          description: ""
+          schema:
+            $ref: '#/definitions/models.Seleccion'
+        "403":
+          description: ""
+    post:
+      tags:
+      - seleccion
+      description: create Seleccion
+      operationId: SeleccionController.Post
+      parameters:
+      - in: body
+        name: body
+        description: body for Seleccion content
+        required: true
+        schema:
+          $ref: '#/definitions/models.Seleccion'
+      responses:
+        "201":
+          description: '{int} models.Seleccion'
+        "403":
+          description: body is empty
+  /seleccion/{id}:
+    get:
+      tags:
+      - seleccion
+      description: get Seleccion by id
+      operationId: SeleccionController.Get One
+      parameters:
+      - in: path
+        name: id
+        description: The key for staticblock
+        required: true
+        type: string
+      responses:
+        "200":
+          description: ""
+          schema:
+            $ref: '#/definitions/models.Seleccion'
+        "403":
+          description: :id is empty
+    put:
+      tags:
+      - seleccion
+      description: update the Seleccion
+      operationId: SeleccionController.Put
+      parameters:
+      - in: path
+        name: id
+        description: The id you want to update
+        required: true
+        type: string
+      - in: body
+        name: body
+        description: body for Seleccion content
+        required: true
+        schema:
+          $ref: '#/definitions/models.Seleccion'
+      responses:
+        "200":
+          description: ""
+          schema:
+            $ref: '#/definitions/models.Seleccion'
+        "403":
+          description: :id is not int
+    delete:
+      tags:
+      - seleccion
+      description: delete the Seleccion
+      operationId: SeleccionController.Delete
+      parameters:
+      - in: path
+        name: id
+        description: The id you want to delete
+        required: true
+        type: string
+      responses:
+        "200":
+          description: '{string} delete success!'
+        "403":
+          description: id is empty
+definitions:
+  models.Jugador:
+    title: Jugador
+    type: object
+    properties:
+      Club:
+        type: string
+      Edad:
+        type: integer
+        format: int64
+      Id:
+        type: integer
+        format: int64
+      IdSeleccion:
+        $ref: '#/definitions/models.Seleccion'
+      Nombre:
+        type: string
+      Posicion:
+        type: string
+  models.Seleccion:
+    title: Seleccion
+    type: object
+    properties:
+      Federacion:
+        type: string
+      Id:
+        type: integer
+        format: int64
+      Nombre:
+        type: string
+      Pais:
+        type: string
+      Tecnico:
+        type: string
+tags:
+- name: seleccion
+  description: |
+    SeleccionController operations for Seleccion
+- name: jugador
+  description: |
+    JugadorController operations for Jugador
