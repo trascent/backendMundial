@@ -3,7 +3,7 @@ package controllers
 import (
 	"encoding/json"
 	"errors"
-	"github.com/trascent/practica1backend/models"
+	"github.com/trascent/backendMundial/models"
 	"strconv"
 	"strings"
 

@@ -1,7 +1,7 @@
 package main
 
 import (
-	_"github.com/trascent/practica1backend/routers"
+	_"github.com/trascent/backendMundial/routers"
 
 	"github.com/astaxie/beego"
 	"github.com/astaxie/beego/orm"
@@ -11,7 +11,9 @@ import (
 )
 
 func init() {
-	orm.RegisterDataBase("default", "postgres", "postgres://postgres:123@127.0.0.1/equipos?sslmode=disable")
+	orm.RegisterDriver("postgres", orm.DRPostgres)
+	orm.RegisterDataBase("default", "postgres", "postgres://"+beego.AppConfig.String("PGuser")+":"+beego.AppConfig.String("PGpass")+"@"+beego.AppConfig.String("PGurls")+"/"+beego.AppConfig.String("PGdb")+"?sslmode=disable&search_path="+beego.AppConfig.String("PGschemas")+"")
+	//orm.RegisterDataBase("default", "postgres", "postgres://postgres:postgres@127.0.0.1/equipos?sslmode=disable")
 	beego.Debug("Filters init...")
     beego.InsertFilter("*", beego.BeforeRouter, cors.Allow(&cors.Options{
         AllowAllOrigins: true,

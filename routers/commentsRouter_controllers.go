@@ -7,7 +7,7 @@ import (
 
 func init() {
 
-	beego.GlobalControllerRouter["github.com/trascent/practica1backend/controllers:JugadorController"] = append(beego.GlobalControllerRouter["github.com/trascent/practica1backend/controllers:JugadorController"],
+	beego.GlobalControllerRouter["github.com/trascent/backendMundial/controllers:JugadorController"] = append(beego.GlobalControllerRouter["github.com/trascent/backendMundial/controllers:JugadorController"],
 		beego.ControllerComments{
 			Method: "Post",
 			Router: `/`,
@@ -15,7 +15,7 @@ func init() {
 			MethodParams: param.Make(),
 			Params: nil})
 
-	beego.GlobalControllerRouter["github.com/trascent/practica1backend/controllers:JugadorController"] = append(beego.GlobalControllerRouter["github.com/trascent/practica1backend/controllers:JugadorController"],
+	beego.GlobalControllerRouter["github.com/trascent/backendMundial/controllers:JugadorController"] = append(beego.GlobalControllerRouter["github.com/trascent/backendMundial/controllers:JugadorController"],
 		beego.ControllerComments{
 			Method: "GetAll",
 			Router: `/`,
@@ -23,7 +23,7 @@ func init() {
 			MethodParams: param.Make(),
 			Params: nil})
 
-	beego.GlobalControllerRouter["github.com/trascent/practica1backend/controllers:JugadorController"] = append(beego.GlobalControllerRouter["github.com/trascent/practica1backend/controllers:JugadorController"],
+	beego.GlobalControllerRouter["github.com/trascent/backendMundial/controllers:JugadorController"] = append(beego.GlobalControllerRouter["github.com/trascent/backendMundial/controllers:JugadorController"],
 		beego.ControllerComments{
 			Method: "GetOne",
 			Router: `/:id`,
@@ -31,7 +31,7 @@ func init() {
 			MethodParams: param.Make(),
 			Params: nil})
 
-	beego.GlobalControllerRouter["github.com/trascent/practica1backend/controllers:JugadorController"] = append(beego.GlobalControllerRouter["github.com/trascent/practica1backend/controllers:JugadorController"],
+	beego.GlobalControllerRouter["github.com/trascent/backendMundial/controllers:JugadorController"] = append(beego.GlobalControllerRouter["github.com/trascent/backendMundial/controllers:JugadorController"],
 		beego.ControllerComments{
 			Method: "Put",
 			Router: `/:id`,
@@ -39,7 +39,7 @@ func init() {
 			MethodParams: param.Make(),
 			Params: nil})
 
-	beego.GlobalControllerRouter["github.com/trascent/practica1backend/controllers:JugadorController"] = append(beego.GlobalControllerRouter["github.com/trascent/practica1backend/controllers:JugadorController"],
+	beego.GlobalControllerRouter["github.com/trascent/backendMundial/controllers:JugadorController"] = append(beego.GlobalControllerRouter["github.com/trascent/backendMundial/controllers:JugadorController"],
 		beego.ControllerComments{
 			Method: "Delete",
 			Router: `/:id`,
@@ -47,7 +47,7 @@ func init() {
 			MethodParams: param.Make(),
 			Params: nil})
 
-	beego.GlobalControllerRouter["github.com/trascent/practica1backend/controllers:SeleccionController"] = append(beego.GlobalControllerRouter["github.com/trascent/practica1backend/controllers:SeleccionController"],
+	beego.GlobalControllerRouter["github.com/trascent/backendMundial/controllers:SeleccionController"] = append(beego.GlobalControllerRouter["github.com/trascent/backendMundial/controllers:SeleccionController"],
 		beego.ControllerComments{
 			Method: "Post",
 			Router: `/`,
@@ -55,7 +55,7 @@ func init() {
 			MethodParams: param.Make(),
 			Params: nil})
 
-	beego.GlobalControllerRouter["github.com/trascent/practica1backend/controllers:SeleccionController"] = append(beego.GlobalControllerRouter["github.com/trascent/practica1backend/controllers:SeleccionController"],
+	beego.GlobalControllerRouter["github.com/trascent/backendMundial/controllers:SeleccionController"] = append(beego.GlobalControllerRouter["github.com/trascent/backendMundial/controllers:SeleccionController"],
 		beego.ControllerComments{
 			Method: "GetAll",
 			Router: `/`,
@@ -63,7 +63,7 @@ func init() {
 			MethodParams: param.Make(),
 			Params: nil})
 
-	beego.GlobalControllerRouter["github.com/trascent/practica1backend/controllers:SeleccionController"] = append(beego.GlobalControllerRouter["github.com/trascent/practica1backend/controllers:SeleccionController"],
+	beego.GlobalControllerRouter["github.com/trascent/backendMundial/controllers:SeleccionController"] = append(beego.GlobalControllerRouter["github.com/trascent/backendMundial/controllers:SeleccionController"],
 		beego.ControllerComments{
 			Method: "GetOne",
 			Router: `/:id`,
@@ -71,7 +71,7 @@ func init() {
 			MethodParams: param.Make(),
 			Params: nil})
 
-	beego.GlobalControllerRouter["github.com/trascent/practica1backend/controllers:SeleccionController"] = append(beego.GlobalControllerRouter["github.com/trascent/practica1backend/controllers:SeleccionController"],
+	beego.GlobalControllerRouter["github.com/trascent/backendMundial/controllers:SeleccionController"] = append(beego.GlobalControllerRouter["github.com/trascent/backendMundial/controllers:SeleccionController"],
 		beego.ControllerComments{
 			Method: "Put",
 			Router: `/:id`,
@@ -79,7 +79,7 @@ func init() {
 			MethodParams: param.Make(),
 			Params: nil})
 
-	beego.GlobalControllerRouter["github.com/trascent/practica1backend/controllers:SeleccionController"] = append(beego.GlobalControllerRouter["github.com/trascent/practica1backend/controllers:SeleccionController"],
+	beego.GlobalControllerRouter["github.com/trascent/backendMundial/controllers:SeleccionController"] = append(beego.GlobalControllerRouter["github.com/trascent/backendMundial/controllers:SeleccionController"],
 		beego.ControllerComments{
 			Method: "Delete",
 			Router: `/:id`,
