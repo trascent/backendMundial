@@ -8,7 +8,7 @@
 package routers
 
 import (
-	"github.com/trascent/practica1backend/controllers"
+	"github.com/trascent/backendMundial/controllers"
 
 	"github.com/astaxie/beego"
 )

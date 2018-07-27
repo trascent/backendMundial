@@ -1,7 +1,7 @@
 package main
 
 import (
-	_"github.com/trascent/practica1backend/routers"
+	_"github.com/trascent/backendMundial/routers"
 
 	"github.com/astaxie/beego"
 	"github.com/astaxie/beego/orm"
